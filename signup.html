@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sign Up</title><link rel="stylesheet" href="style.css"></head><body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <a href="index.html" class="brand-link"><img src="assets/logo.png" class="logo" alt="BrightPath Tutoring Logo"></a>
+      <div>
+        <a href="index.html" class="brand-title">BrightPath Tutoring</a>
+        <div class="brand-sub">Math • Science • Physics • Grades 4–12</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="homework.html">Assignments Help</a>
+      <a href="learning.html">Learning Portal</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="cta" href="signup.html">Sign Up</a>
+      <a class="cta muted" href="admin.html">Admin</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container section">
+  <h1>Sign Up / Request Trial</h1>
+  <form id="signupForm" class="form-grid">
+    <input name="parent" placeholder="Parent name" required>
+    <input name="email" type="email" placeholder="Email" required>
+    <input name="student" placeholder="Student name" required>
+    <select name="country" required><option value="">Select country</option><option>United States</option><option>Canada</option><option>United Kingdom</option><option>India</option><option>Australia</option><option>Other</option></select>
+    <select name="grade" required><option>Grade 4</option><option>Grade 5</option><option>Grade 6</option><option>Grade 7</option><option>Grade 8</option><option>Grade 9</option><option>Grade 10</option><option>Grade 11</option><option>Grade 12</option></select>
+    <select name="subject" required><option>Math</option><option>General Science</option><option>Physics</option><option>Homework / Assignment Help</option></select>
+    <select name="plan" required><option value="free">Free Trial</option><option value="full">Full Course</option></select>
+    <textarea name="note" placeholder="Short note (optional)"></textarea>
+    <button class="btn primary" type="submit">Request Trial</button>
+  </form>
+  <div id="signupMsg" class="muted" role="status" aria-live="polite"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© 2025 BrightPath Tutoring — Worldwide</div>
+    <div class="footer-links"><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></div>
+  </div>
+</footer>
+
+<script type="module" src="supabase-init.js"></script>
+<script type="module" src="script.js"></script>
+</body></html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    // 🔐 SIMPLE ADMIN PASSWORD PROTECTION
+    const ADMIN_PASSWORD = "bright2025"; // CHANGE THIS PASSWORD
+
+    const entered = sessionStorage.getItem("adminLoggedIn");
+
+    if (!entered) {
+      const pass = prompt("Enter Admin Password:");
+
+      if (pass !== ADMIN_PASSWORD) {
+        alert("Access denied.");
+        window.location.href = "index.html";
+      } else {
+        sessionStorage.setItem("adminLoggedIn", "yes");
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" class="brand-link">
+          <img src="assets/logo.png" class="logo" alt="BrightPath Tutoring Logo">
+        </a>
+        <div>
+          <a href="index.html" class="brand-title">BrightPath Tutoring</a>
+          <div class="brand-sub">Math • Science • Physics • Grades 4–12</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="homework.html">Assignments Help</a>
+        <a href="learning.html">Learning Portal</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a class="cta" href="signup.html">Sign Up</a>
+        <a class="cta muted" href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>Admin — Registrations</h1>
+
+    <div class="admin-actions">
+      <button id="exportCsv" class="btn">Export CSV</button>
+      <button id="clearAll" class="btn">Clear All (Supabase)</button>
+    </div>
+
+    <table id="regTable" class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Student</th>
+          <th>Grade</th>
+          <th>Subject</th>
+          <th>Plan</th>
+          <th>Email</th>
+          <th>When</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 BrightPath Tutoring — Worldwide</div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a> · 
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- These scripts run ONLY after correct login -->
+  <script type="module" src="supabase-init.js"></script>
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>

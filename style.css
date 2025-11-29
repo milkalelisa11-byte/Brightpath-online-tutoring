@@ -1,0 +1,44 @@
+
+:root{--accent:#0ea5a4;--muted:#6b7280;--bg:#f8fafc}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:#0f172a}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+.site-header{background:white;border-bottom:1px solid #e6eef0;position:sticky;top:0;z-index:20}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width: 100px;;height: 150px;px;border-radius:15px}
+.brand-title{font-size:18px;font-weight:800;text-decoration:none;color:inherit}
+.brand-sub{font-size:13px;color:var(--muted)}
+.nav{display:flex;gap:12px;align-items:center}
+.nav a{text-decoration:none;color:inherit;font-weight:600}
+.nav .cta{background:var(--accent);padding:8px 12px;border-radius:8px;color:white;text-decoration:none}
+.hero{display:flex;gap:24px;align-items:center;padding:36px 0}
+.hero img{max-width:420px;border-radius:12px}
+.lead{color:var(--muted)}
+.section{padding:24px 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:12px}
+.card{background:white;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;border:1px solid #e6eef0;background:white;color:inherit;cursor:pointer}
+.btn.primary{background:var(--accent);color:white;border:0}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+input,select,textarea{padding:10px;border-radius:8px;border:1px solid #e6eef0}
+textarea{grid-column:1/ -1;min-height:120px}
+.muted{color:var(--muted)}
+.reg-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.reg-box{background:white;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+.table{width:100%;border-collapse:collapse;margin-top:12px}
+.table th,.table td{border:1px solid #e6eef0;padding:8px;text-align:left}
+.admin-actions{display:flex;gap:8px;margin-bottom:12px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+@media(max-width:900px){
+  .nav{display:none}
+  .nav-toggle{display:block}
+  .cards{grid-template-columns:1fr}
+  .hero{flex-direction:column}
+  .form-grid{grid-template-columns:1fr}
+  .reg-grid{grid-template-columns:1fr}
+}
+.hero-right img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
